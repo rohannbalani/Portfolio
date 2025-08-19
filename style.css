@@ -1,0 +1,104 @@
+/* ========== Design Tokens ========== */
+:root {
+  --bg: #0c0f14;
+  --bg-soft: #11141a;
+  --text: #e7e9ee;
+  --text-muted: #a9b1c3;
+  --accent: #1e90ff;
+  --accent-2: #7c5cff;
+  --ring: rgba(30,144,255,0.45);
+  --border: rgba(255,255,255,0.12);
+  --shadow: 0 10px 30px rgba(0,0,0,0.45);
+  --radius: 16px;
+  --font-sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+}
+
+/* Light theme */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f6f7fb;
+    --text: #111827;
+    --text-muted: #4b5563;
+    --border: rgba(17, 24, 39, 0.08);
+    --shadow: 0 10px 30px rgba(0,0,0,0.10);
+  }
+}
+
+/* Manual theme override */
+body.theme--dark { color-scheme: dark; }
+body.theme--light { color-scheme: light; }
+body.theme--auto { color-scheme: light dark; }
+
+/* ========== Base Reset ========== */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* Skip link (for accessibility) */
+.skip-link {
+  position: absolute; left: -9999px;
+}
+.skip-link:focus {
+  left: 16px; top: 16px;
+  background: var(--bg-soft);
+  padding: 8px 12px;
+  border-radius: 8px;
+  outline: 2px solid var(--ring);
+}
+
+/* Background wash */
+.bg-wash {
+  position: fixed;
+  inset: -20vmax;
+  pointer-events: none;
+  background:
+    radial-gradient(40vmax 40vmax at 10% 10%, rgba(124,92,255,0.18), transparent 55%),
+    radial-gradient(50vmax 50vmax at 80% 20%, rgba(30,144,255,0.18), transparent 60%),
+    radial-gradient(35vmax 35vmax at 70% 80%, rgba(255,255,255,0.06), transparent 60%);
+  filter: saturate(120%);
+  z-index: 0;
+}
+
+/* Logo */
+.logo {
+  display: grid; place-items: center;
+  width: 40px; height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff; font-weight: 800;
+}
+
+/* Card (kept minimal for consistency with Tailwind) */
+.card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+
+/* Muted text */
+.muted { color: var(--text-muted); font-weight: 600; }
+
+/* Eyebrow text */
+.eyebrow {
+  color: var(--text-muted);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* Reveal fallback (when AOS disabled / reduced motion) */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.in { opacity: 1; transform: none; }
+body.rm .reveal { opacity: 1; transform: none; transition: none; }

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rohan Balani — Software Developer Portfolio</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: "var(--bg)",
+            "bg-soft": "var(--bg-soft)",
+            text: "var(--text)",
+            muted: "var(--text-muted)",
+            accent: "var(--accent)",
+            "accent-2": "var(--accent-2)",
+            border: "var(--border)",
+            ring: "var(--ring)",
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
+            mono: ["JetBrains Mono", "ui-monospace", "Menlo", "Consolas", "monospace"],
+          },
+          borderRadius: { xl: "var(--radius)" },
+          boxShadow: { soft: "var(--shadow)" },
+        },
+      },
+    }
+  </script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Custom CSS tokens -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="theme--auto font-sans bg-bg text-text">
+  <!-- Background wash -->
+  <div aria-hidden="true" class="bg-wash"></div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-10 flex justify-between items-center px-6 py-3 bg-bg-soft/70 backdrop-blur-md border-b border-border">
+    <a href="#top" class="flex items-center gap-2 font-bold text-text">
+      <span class="logo">RB</span>
+      <span class="hidden sm:inline">Rohan Balani</span>
+    </a>
+    <nav class="hidden md:flex gap-6 items-center">
+      <a href="#experience" class="hover:text-accent">Experience</a>
+      <a href="#projects" class="hover:text-accent">Projects</a>
+      <a href="#education" class="hover:text-accent">Education</a>
+      <a href="#contact" class="hover:text-accent">Contact</a>
+      <a href="resume.pdf" target="_blank" class="px-3 py-2 rounded-lg bg-accent text-white hover:bg-accent-2 transition">Resume</a>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6">
+    <!-- Hero -->
+    <section id="hero" class="text-center py-20" data-aos="fade-up">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1 class="text-4xl md:text-6xl font-bold">Rohan Balani</h1>
+      <p class="mt-4 text-lg text-muted">
+  Motivated IT student with a strong foundation in <b>C++</b>, <b>C#</b>, and <b>Python</b>, 
+  experienced in backend development and database-driven applications. 
+  Passionate about solving real-world problems and eager to grow as a <b>Software Developer</b> 
+  by contributing to innovative projects in fast-paced environments.
+</p>
+      <div class="flex justify-center gap-4 mt-6">
+        <a href="#projects" class="px-5 py-3 rounded-xl bg-accent text-white shadow-soft hover:bg-accent-2 transition">View Projects</a>
+        <a href="mailto:rohanofficialca@gmail.com" class="px-5 py-3 rounded-xl border border-border bg-transparent text-text hover:bg-bg-soft transition">Email Me</a>
+      </div>
+      <ul class="mt-6 space-y-1 text-muted">
+        <li><span class="text-text font-semibold">Location:</span> North York, ON M2M 0A9</li>
+        <li><span class="text-text font-semibold">Phone:</span> +1 437 322 8426</li>
+        <li><span class="text-text font-semibold">Email:</span> rohanofficialca@gmail.com</li>
+      </ul>
+      <!-- Socials -->
+      <div class="flex justify-center gap-6 mt-6">
+        <a href="https://github.com/rohannbalani" target="_blank" aria-label="GitHub">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" class="w-6 h-6 invert" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/rohanbalani7/" target="_blank" aria-label="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" class="w-6 h-6 invert" alt="LinkedIn">
+        </a>
+        <a href="https://www.instagram.com/rohannbalani/" target="_blank" aria-label="Instagram">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" class="w-6 h-6 invert" alt="Instagram">
+        </a>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="about" class="py-12" data-aos="fade-right">
+      <h2 class="text-2xl font-semibold mb-4">Technical Skills</h2>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-muted">
+        <li><b>Languages:</b> Python, C, C++, C#, JavaScript, HTML, CSS, SQL</li>
+        <li><b>Tools/Frameworks:</b> Git, MySQL, MongoDB, Visual Studio, VS Code, Jupyter Notebook, .NET, JavaFX, Maven, Selenium</li>
+        <li><b>Concepts:</b> OOP, REST APIs, Data Structures, Debugging</li>
+        <li><b>Other:</b> Agile, GitHub, Prompt Engineering, Microsoft Office</li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-12 space-y-6" data-aos="fade-left">
+      <h2 class="text-2xl font-semibold mb-4">Experience</h2>
+      <article class="card">
+        <header class="flex justify-between items-baseline mb-2">
+          <h3 class="font-semibold">Python Developer Intern <span class="muted">@ Ciright Enterprises</span></h3>
+          <span class="text-sm text-muted">Jan 2024 – Aug 2024</span>
+        </header>
+        <ul class="list-disc list-inside text-muted">
+          <li>Wrote optimized backend Python scripts for business processes.</li>
+          <li>Ran SQL queries for structured data retrieval.</li>
+          <li>Documented and debugged real-time software issues.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <header class="flex justify-between items-baseline mb-2">
+          <h3 class="font-semibold">Student Intern <span class="muted">@ Edunet Foundation</span></h3>
+          <span class="text-sm text-muted">Jun 2023 – Jul 2023</span>
+        </header>
+        <ul class="list-disc list-inside text-muted">
+          <li>Learned cloud fundamentals and application deployment.</li>
+          <li>Participated in training sessions on AI and Web Development.</li>
+          <li>Worked in a team to develop a project based on real-world use cases.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <header class="flex justify-between items-baseline mb-2">
+          <h3 class="font-semibold">Digital Marketing Intern <span class="muted">@ Mindler Education</span></h3>
+          <span class="text-sm text-muted">Jul 2020 – Dec 2020</span>
+        </header>
+        <ul class="list-disc list-inside text-muted">
+          <li>Designed and scheduled digital campaigns targeting student users.</li>
+          <li>Conducted competitor research and presented strategy improvements.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <header class="flex justify-between items-baseline mb-2">
+          <h3 class="font-semibold">Prep Cook / Line Cook <span class="muted">@ Hyatt Regency, Jaipur</span></h3>
+          <span class="text-sm text-muted">Jun 2023 – Jan 2024</span>
+        </header>
+        <ul class="list-disc list-inside text-muted">
+          <li>Worked in a high-paced kitchen team, ensuring quality and timely preparation of meals.</li>
+          <li>Applied teamwork and time-management skills under pressure.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Volunteer -->
+    <section id="volunteer" class="py-12 space-y-6" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">Volunteer Experience</h2>
+      <!-- Peer Mentor first -->
+      <article class="card">
+        <header class="flex justify-between items-baseline mb-2">
+          <h3 class="font-semibold">Peer Mentor <span class="muted">@ Humber College</span></h3>
+          <span class="text-sm text-muted">Aug 2025 – Present</span>
+        </header>
+        <ul class="list-disc list-inside text-muted">
+          <li>Mentoring first-year students in programming fundamentals.</li>
+          <li>Providing guidance for course selection and career preparation.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <header class="flex justify-between items-baseline mb-2">
+          <h3 class="font-semibold">Team Lead / Coordinator <span class="muted">@ Zarurat NGO</span></h3>
+          <span class="text-sm text-muted">Oct 2022 – Jul 2024</span>
+        </header>
+        <ul class="list-disc list-inside text-muted">
+          <li>Coordinated events and community outreach programs.</li>
+          <li>Managed volunteers and delegated responsibilities.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <header class="flex justify-between items-baseline mb-2">
+          <h3 class="font-semibold">Student Council Representative <span class="muted">@ JECRC University</span></h3>
+          <span class="text-sm text-muted">Feb 2022 – Mar 2024</span>
+        </header>
+        <ul class="list-disc list-inside text-muted">
+          <li>Represented student body in council meetings.</li>
+          <li>Organized events and cultural activities.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-12" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-6">Projects</h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Admission Portal -->
+        <a href="#" target="_blank" class="rounded-xl border border-border bg-bg-soft hover:bg-bg transition shadow-soft">
+          <div class="h-40 bg-gradient-to-r from-accent/30 to-accent-2/30"></div>
+          <div class="p-4">
+            <h3 class="font-semibold">Admission Portal</h3>
+            <p class="text-muted text-sm">Java, JavaFX, Hibernate, MySQL</p>
+            <ul class="list-disc list-inside text-muted text-sm">
+              <li>Built desktop portal for student admissions and records.</li>
+              <li>Implemented Hibernate ORM for database interaction.</li>
+              <li>Designed JavaFX UI with form validation and reporting.</li>
+            </ul>
+          </div>
+        </a>
+
+        <!-- Event Management -->
+        <a href="https://github.com/rohannbalani/event-management" target="_blank" class="rounded-xl border border-border bg-bg-soft hover:bg-bg transition shadow-soft">
+          <div class="h-40 bg-gradient-to-r from-accent/30 to-accent-2/30"></div>
+          <div class="p-4">
+            <h3 class="font-semibold">Event Management System</h3>
+            <p class="text-muted text-sm">C#, .NET, MySQL</p>
+            <ul class="list-disc list-inside text-muted text-sm">
+              <li>CRUD for event creation, updates, and deletion.</li>
+              <li>User authentication & role-based access.</li>
+              <li>Persistent data via MySQL backend.</li>
+            </ul>
+          </div>
+        </a>
+
+        <!-- Pet Adoption -->
+        <a href="https://github.com/rohannbalani/pet-adoption" target="_blank" class="rounded-xl border border-border bg-bg-soft hover:bg-bg transition shadow-soft">
+          <div class="h-40 bg-gradient-to-r from-accent/30 to-accent-2/30"></div>
+          <div class="p-4">
+            <h3 class="font-semibold">Pet Adoption Website</h3>
+            <p class="text-muted text-sm">HTML, CSS, JavaScript, API</p>
+            <ul class="list-disc list-inside text-muted text-sm">
+              <li>Responsive app with dynamic filters.</li>
+              <li>Integrated third-party API for live pet data.</li>
+              <li>Mobile optimized for clean UX.</li>
+            </ul>
+          </div>
+        </a>
+
+        <!-- Portfolio -->
+        <a href="https://rohannbalani.github.io/portfolio" target="_blank" class="rounded-xl border border-border bg-bg-soft hover:bg-bg transition shadow-soft">
+          <div class="h-40 bg-gradient-to-r from-accent/30 to-accent-2/30"></div>
+          <div class="p-4">
+            <h3 class="font-semibold">Portfolio Website</h3>
+            <p class="text-muted text-sm">Tailwind, AOS, HTML, CSS, JS</p>
+            <ul class="list-disc list-inside text-muted text-sm">
+              <li>Designed and built this site to showcase my work.</li>
+              <li>Integrated animations with AOS for smooth UX.</li>
+              <li>Responsive, accessible, and optimized for SEO.</li>
+            </ul>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="py-12" data-aos="fade-left">
+      <h2 class="text-2xl font-semibold mb-4">Education</h2>
+      <article class="mb-4">
+        <h3 class="font-semibold">Diploma in Information Technology Solutions</h3>
+        <p class="text-muted">Humber College, Toronto — Expected Aug 2026</p>
+      </article>
+      <article class="mb-4">
+        <h3 class="font-semibold">Bachelor of Computer Applications</h3>
+        <p class="text-muted">JECRC University, Jaipur — Graduated Jul 2024</p>
+      </article>
+      <article class="mb-4">
+        <h3 class="font-semibold">High School</h3>
+        <p class="text-muted">Delhi Public School, Jodhpur — 2019-2021</p>
+      </article>
+      <article>
+        <h3 class="font-semibold">Secondary School</h3>
+        <p class="text-muted">Mayo College, Ajmer — 2012–2019</p>
+      </article>
+    </section>
+
+    <!-- Contact -->
+   <section id="contact" class="py-12 text-center" data-aos="zoom-in">
+  <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+  <p class="mb-6">Want to collaborate or say hi? Fill out the form below:</p>
+
+  <form id="contactForm" action="https://formspree.io/f/mgvzjoly" method="POST" class="max-w-lg mx-auto space-y-4">
+    <input type="text" name="name" placeholder="Your Name" required 
+      class="w-full px-4 py-3 rounded-xl border border-border bg-bg-soft focus:ring-2 focus:ring-accent" />
+    <input type="email" name="_replyto" placeholder="Your Email" required 
+      class="w-full px-4 py-3 rounded-xl border border-border bg-bg-soft focus:ring-2 focus:ring-accent" />
+    <textarea name="message" rows="5" placeholder="Your Message" required 
+      class="w-full px-4 py-3 rounded-xl border border-border bg-bg-soft focus:ring-2 focus:ring-accent"></textarea>
+    <button type="submit" class="w-full px-5 py-3 rounded-xl bg-accent text-white hover:bg-accent-2 shadow-soft transition">
+      Send Message
+    </button>
+    <p id="formMsg" class="text-sm text-muted mt-2"></p>
+  </form>
+</section>
+
+<script>
+  const contactForm = document.getElementById("contactForm");
+  const formMsg = document.getElementById("formMsg");
+
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault(); // stop normal reload
+    formMsg.textContent = "Sending...";
+
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch(contactForm.action, {
+        method: contactForm.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        formMsg.textContent = "✅ Message sent!";
+        contactForm.reset(); // clear input fields
+      } else {
+        formMsg.textContent = "⚠️ Something went wrong. Try again.";
+      }
+    } catch (error) {
+      formMsg.textContent = "⚠️ Error sending message.";
+    }
+  });
+</script>
+
+  <footer class="py-8 text-center text-sm text-muted">
+    © <span id="year"></span> Rohan Balani • Built with Tailwind + AOS
+  </footer>
+
+  <script>
+    AOS.init({ duration: 800, once: true });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
